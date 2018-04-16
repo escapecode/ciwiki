@@ -149,6 +149,27 @@ check_for_link(char *line, int *skip_chars)
       url = NULL;
       return result;
     }   
+    else if ( !strncasecmp(p, "video=", 6) )
+    /* local video */
+    {
+      q=p;
+      start=p+6;    
+      while ( *p != '\0' && !isspace(*p) && *p != '|' ) p++;
+      url = malloc(sizeof(char) * ((p - start) + 2) );
+      memset(url, 0, sizeof(char) * ((p - start) + 2));
+      strncpy(url, start, p - start);
+      start=q;
+      *start = '\0';
+      lgasprintf = asprintf(&result, 
+      "<video controls>\n"
+      "<source src=\"%s\" \" />\n"
+      "</video>\n",
+      url,url);       
+      *skip_chars = p - start;
+      free(url);
+      url = NULL;
+      return result;
+    }   
     else if ( !strncasecmp(p, "dailymotion=", 12) )
     /* dailymotion video embedded */
     {
