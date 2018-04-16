@@ -628,6 +628,13 @@
 "background:#f2f2f2;\n" \
 "padding:5px;\n" \
 "}\n" \
+"h1 { \n" \
+"	text-align : center; \n" \
+"} \n" \
+" \n" \
+"h2, h3, h4, h5 { \n" \
+"	margin-left: 1em; \n" \
+"} \n" \
 "\n" 
 
 
