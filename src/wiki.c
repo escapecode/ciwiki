@@ -356,29 +356,28 @@ wiki_show_index_page(HttpResponse *res, char *dir)
       
       n = scandir(dir, &namelist, 0, (void *)changes_compar);
       
+      //links to the files inside the selected folder
+      if (*dir=='.')
+      http_response_printf(res, "<b><a href='Index?Folder=%s'>%s</a></b> -\n", ".","Pages"); 
+      else
+        http_response_printf(res, "<i><a href='Index?Folder=%s'>%s</a></i> -\n", ".","Pages"); 
+      if ( !strcmp(dir,PICSFOLDER) )
+        http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b> -\n", PICSFOLDER, toupper(PICSFOLDER[0]), PICSFOLDER + 1); 
+      else  
+        http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i> -\n", PICSFOLDER, toupper(PICSFOLDER[0]), PICSFOLDER + 1); 
+      if ( !strcmp(dir,FILESFOLDER) )  
+        http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b>\n", FILESFOLDER, toupper(FILESFOLDER[0]), FILESFOLDER + 1); 
+      else
+        http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i>\n", FILESFOLDER, toupper(FILESFOLDER[0]), FILESFOLDER + 1); 
+      //~ if ( !strcmp(dir,HTMLFOLDER) )
+        //~ http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b>\n", HTMLFOLDER, toupper(HTMLFOLDER[0]), HTMLFOLDER + 1); 
+      //~ else
+        //~ http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i>\n", HTMLFOLDER, toupper(HTMLFOLDER[0]), HTMLFOLDER + 1); 
+        
+      http_response_printf(res, "<hr /><ul>\n");
       //prepare an collapsible box
       //Note: javascript must be enabled!
-      http_response_printf(res, "<div id=""wrapper""><p><a onclick=""expandcollapse('myvar%i');"" title=""Expand or collapse"">Index %i</a></p><div id=""myvar%i"">\n",numvar,numvar,numvar);  
-      http_response_printf(res, "<ul>\n");
-      //create links to the folders
-      if ( !strcmp(dir,PICSFOLDER) )
-        http_response_printf(res, "<li><b><a href='Index?Folder=%s'>Folder:%s</a></b></li>\n", PICSFOLDER,PICSFOLDER); 
-      else  
-        http_response_printf(res, "<li><i><a href='Index?Folder=%s'>Folder:%s</a></i></li>\n", PICSFOLDER,PICSFOLDER); 
-      if ( !strcmp(dir,FILESFOLDER) )  
-        http_response_printf(res, "<li><b><a href='Index?Folder=%s'>Folder:%s</a></b></li>\n", FILESFOLDER,FILESFOLDER); 
-      else
-        http_response_printf(res, "<li><i><a href='Index?Folder=%s'>Folder:%s</a></i></li>\n", FILESFOLDER,FILESFOLDER); 
-      if ( !strcmp(dir,HTMLFOLDER) )
-        http_response_printf(res, "<li><b><a href='Index?Folder=%s'>Folder:%s</a></b></li>\n", HTMLFOLDER,HTMLFOLDER); 
-      else
-        http_response_printf(res, "<li><i><a href='Index?Folder=%s'>Folder:%s</a></i></li>\n", HTMLFOLDER,HTMLFOLDER); 
-      if (*dir=='.')
-      http_response_printf(res, "<li><b><a href='Index?Folder=%s'>Folder:%s</a></b></li>\n", ".","Wiki"); 
-      else
-        http_response_printf(res, "<li><i><a href='Index?Folder=%s'>Folder:%s</a></i></li>\n", ".","Wiki"); 
-        
-      //links to the files inside the selected folder
+      http_response_printf(res, "<div id=""wrapper""><p><div id=""myvar%i"">\n<ul>\n",numvar);           
       while(n--)
       {
         if ( namelist[n]->d_type == DT_REG )
@@ -397,7 +396,7 @@ wiki_show_index_page(HttpResponse *res, char *dir)
                 if (numvar%4 == 0) http_response_printf(res, "<BR>\n");
                 numvar++;
                 //Note= javascript must be enabled!
-                http_response_printf(res, "<div id=""wrapper""><p><a onclick=""expandcollapse('myvar%i');"" title=""Expand or collapse"">Index %i</a></p><div id=""myvar%i"">\n",numvar,numvar,numvar);           
+                http_response_printf(res, "<div id=""wrapper""><p><div id=""myvar%i"">\n",numvar);           
                 http_response_printf(res, "<ul>\n");
             }
             /* show filename - link to /folder/filname */
