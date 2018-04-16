@@ -255,14 +255,26 @@
 
 #define HOMETEXT ""                                                      \
                                                                          \
-"==Welcome to !CiWiki [images/ciwiki.png] alias !DidiWiki\n"                                 \
-"/!CiWiki / is a fork of /!DidiWiki / with several new features added.\n" \
-"!CiWiki is a small and simple [http://en.wikipedia.org/wiki/Wiki WikiWikiWeb] implementation\n" \
-"Ideal for personal note-taking, \"to do\" lists, and any other uses you can think of.\n" \
-"!CiWiki is fast and does not require webserver, database mng and php interpreter.\n\n\n"  \
-"For an example of how a !CiWiki entry looks in text form you can [?edit edit] this page. Also see WikiHelp for infomation on usage and formatting rules. Use The WikiSandbox to experiment.\n" \
-"/!CiWiki / is written by [mailto://inphilly@gmail.com Jean-Pierre Redonnet] and released under [http://www.gnu.org GNU] [http://www.gnu.org/copyleft/gpl.html GPL]. \n" \
-"Matthew Allum is the original author of /!DidiWiki (2004) \n"
+"==Welcome to !CiWiki\n" \
+"[images/ciwiki.png]\n" \
+"\n" \
+"/!CiWiki/' is a lightweight [http://en.wikipedia.org/wiki/Wiki WikiWikiWeb].\n" \
+"\n" \
+"In essence, this website is an easy way for anyone to make and edit webpages (even this page you are currently reading).\n" \
+"For a reference, [http://wikipedia.org] runs a program just like !CiWiki, allowing their users to make changes to their webpage articles.\n" \
+"\n" \
+"===What can you do with !CiWiki\n" \
+"* Make pages that hold food recipes that all of youur friends can read, as well as allow them to add their own recipes\n" \
+"* Make a To Do list of your tasks.  You can make your To Do tasks visible by others, or only by people with access\n" \
+"* Blog about a topic or make an onlne trip journal.  You can even add photos and videos\n" \
+"* Write a book.  Each webpage you create can be a different chapter of the book.  You decide what chapters others can see\n" \
+"* Create training documentation that you or others can update whenever changes have to be made\n" \
+"* Make an encyclopedia website just like [http://wikipedia.org]\n" \
+"\n" \
+"\n" \
+"Formatting webpage text, images, links, etc. is easily handled requiring no coding experience.  You can quickly learn how to use !CiWiki by going to WikiHelp.  You can also play around making webpage articles by visiting WikiSandbox.\n" \
+"\n" \
+"!CiWiki software is lightweight, doesn't require a web server or database, doesn't need a code interpreter (like PHP), and doesn't require you to install other software.\n"
 
 
 #define HOMEREDIRECT ""                                                  \
