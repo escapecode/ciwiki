@@ -288,38 +288,40 @@
 
 #define HELPTEXT ""                                                      \
                                                                          \
-"=Quick Guide \n"                                                    \
-"Top toolbar usage\n"                                                    \
-"* [?edit Edit] Allows you to edit pages ( see below for rules )\n"       \
-"* [?delete Delete] Allows you to delete pages\n"                        \
-"* [WikiHome Home] Takes you to the wiki front page\n"                \
-"* [Index Index] List all the pages in the wiki\n"                \
-"* [Changes Changes] Lists the pages changed by date\n"                  \
-"* [Create New] Creates a new wiki page by title\n"                      \
-"* [WikiHelp Help] Takes you to this help page\n"                            \
+"{{toc}}\n" \
+"=Credits \n" \
+"!CiWiki is an updated version of !DidiWiki. \n\n" \
+"!CiWiki was created by Jean-Pierre Redonnet and is available on [https://github.com/RhoneAlpes/ciwiki Github]\n\n" \
+"!DidiWiki was created by Matthew Allum \n" \
+"\n" \
+"Please refer to Github to see a list of development contributers. \n" \
+"=Quick Overview \n"                                                    \
+"===Creating Webpages Quickly and Easily \n" \
+"!CiWiki allows you to type in short lines of text to automatically format a page. \n" \
+"For example, you can do something as easy like typing /!youtube=link / to have a Youtube video appear on your page. \n" \
+"===Finding a !CiWiki page \n" \
+"In the upper right is a search box.  Any word(s) entered will be searched for amongst all of the text of all of the pages\n" \
 "\n"                                                                     \
-"Use the text entry box to perform a very simple keyword search on the\n" \
-"Wiki contents. Hit return to activate the search.\n"                    \
-"\n"                                                                     \
-"To search through the page names: Open the Index (and the index boxes), \n" \
-"open the built in browser search, keys <ctrl><f> \n"           \
+"To search through the page titles only, click on the /Index/ link on the top menu. \n" \
+"Since all of the /Page/ titles are visible, you can than use your browser's built in search, keys (e.g. <ctrl><f>) \n"           \
 "\n"                                                                     \
 "Use the WikiSandbox to practice formatting.\n"                         \
-"\n"                                                                     \
-"----\n"                                                                 \
-"=Formatting rules\n"                                                    \
-"\n"                                                                     \
-"=Top Level Heading\n"                                                   \
-"  =Top Level Heading (H1)\n"                                            \
-"==Second Level Heading\n"                                               \
-"  ==Second Level Heading (H2)\n"                                        \
-"More levels \n"                                                         \
-"  === (H3), ==== (H4) etc\n"                                            \
-"----\n"                                                                 \
-"The horizontal lines in this page are made with 4 or more dashes:\n"     \
-" ---- Horizonal line\n"                                                 \
-"----\n"                                                                 \
-"\n"                                                                     \
+"=Using Key Tags to Format Articles \n"                                                                     \
+"==Headings \n" \
+"An /=/ character creates headings.  The number of /=/ represents the heading level \n"                                                    \
+"The formatting for the area you are reading now uses the following headings \n" \
+" =Formatting\n"                                                   \
+" ==Headings\n"                                        \
+" ==Horizontal line\n"                                        \
+"==Horizonal line\n"                                                 \
+" -- will create a horizontal line\n"                                                                 \
+"--\n"                                                                 \
+"==Text \n" \
+"===Base Text Formatting\n"                                                                 \
+" \n" \
+"  *Bold text*, /italic text/, _underscore text_ and -strikethrough- /*combination*/ \n"  \
+"*Bold text*, /italic text/, _underscore text_ and -strikethrough- /*combination*/ \n"    \
+"===Paragraphs\n"                                                                     \
 "Paragraphs are separated by an empty line\n"                            \
 "\n"                                                                     \
 "Like this. Another paragraph.\n"                                        \
@@ -327,72 +329,84 @@
 " Paragraphs are separated by a blank line.\n"                           \
 "\n"                                                                     \
 " Like this. Another paragraph.\n"                                       \
-"----\n"                                                                 \
-"*Bold text*, /italic text/, _underscore text_ and -strikethrough-.\n"    \
-"  *Bold text*, /italic text/, _underscore text_ and -strikethrough-.\n"  \
-"/*Combination of bold and italics*/\n"                                  \
-"  /*Combination of bold and italics*/\n"                                \
-"----\n"                                                                 \
+"===Quotation \n" \
+"Indented quotatiopjns begin with ' \n"                                             \
 "\n"                                                                     \
-"{B}Text color{B}\n"                                                     \
-" {B}Text color{B}\n"                                                    \
-"(Y)Background color(Y)\n"                                               \
-" (Y)Background color(Y)\n"                                             \
+" 'I had a monumental idea this morning, but I didn't like it\n"         \
+"'I had a monumental idea this morning, but I didn't like it \n"          \
+"===Keywords\n" \
+" use /`/ to make a keyword\n" \
+" There is a `keyword` in this line.\n" \
+"There is a `keyword` in this line.\n" \
+"\n" \
+"===Color \n"                                                                 \
+"\n"                                                                     \
+" Text {B}blue{B}\n"                                                    \
+"Text {B}blue{B}\n"                                                    \
+" Background (Y)color(Y)\n"                                             \
+"Background (Y)color(Y)\n"                                             \
 "\n"                                                                    \
-"Colors: {B}B blue{B}  {C}C cyan{C}  {G}G green{G}  {P}P pink{P}  {R}R red{R}  {Y}Y yellow{Y}\n" \
+"Foreground: {B}B blue{B}  {C}C cyan{C}  {G}G green{G}  {P}P pink{P}  {R}R red{R}  {Y}Y yellow{Y}\n" \
 "\n"                                                                    \
-"Colors: (B)B blue(B)  (C)C cyan(C)  (G)G green(G)  (P)P pink(P)  (R)R red(R)  (Y)Y yellow(Y)\n" \
-"----\n"                                                                 \
+"Background: (B)B blue(B)  (C)C cyan(C)  (G)G green(G)  (P)P pink(P)  (R)R red(R)  (Y)Y yellow(Y)\n" \
 "\n"                                                                  \
-"+Highlight+\n"                                                       \
 " +Highlight+\n"                                                      \
+"+Highlight+\n"                                                       \
 "-----\n"                                                              \
-"\n"                                                                   \
-"WikiLinks are formed by two or more words in /camelcase/.\n"           \
-" WikiLinks are formed by two or more words in /camelcase/.\n"          \
-"External links begin with http://, like http://www.freepan.org\n"       \
-" External links begin with http://, like http://www.freepan.org\n"      \
-"Forced wiki [links] are a alphanumeric string surrounded by square brackets.\n" \
-" Forced wiki [links] are a alphanumeric string surrounded by square brackets.\n" \
-"Named http links have text with an !http:// link inside, like [http://www.freepan.org FreePAN]\n" \
-" Named http links have text with an !http:// link inside, like [http://www.freepan.org FreePAN]\n" \
+"==Tag Rules\n" \
+"===Explicitly Typed Text\n" \
+"Lines prefixed with a space are unformatted\n" \
+"This line isn't prefixed with a space \n" \
+" This line is \n" \
+"===HTML Tags HTML Automatically Rewritten\n" \
+"If /<Inline> <html> <is> <escaped>/ is written, it will be rewritten (i.e. escaped) \n" \
+"so that the browser won't treat it as code to be executed.\n" \
+"\n" \
+"----\n" \
+"==Links \n" \
+"| *Type* | *Formatting* | *Example* | *What makes it a link* \n" \
+"|Wiki link|!MyLink |This is MyLink|If text is mixed upper and lowercase (ie /camelcase/) it is a link to a page with that same name \n" \
+"|External|!http:// |This is a http://link.com |If a word starts with !http:// \n" \
+"|Forced|![links] |This is a link to [google.com] | surrounding textr with brackets\n" \
+"|Named|![http://www.freepan.org FreePAN]|This is a [http://www.freepan.org FreePAN]|Using brackets and putting a space between link and it's name \n" \
+"\n"                                                                     \
 "Sometimes !WordsShouldNotMakeAWikiLink so put a '! ' beforehand.\n"      \
 " Sometimes !WordsShouldNotMakeAWikiLink so put a '! ' beforehand.\n"     \
-"Same thing with !http://foobar.com\n"                                   \
-" Same thing with !http://foobar.com\n"                                  \
+"\n"                                                                     \
 "Open external links in new tags:\n"                                     \
-" {{wwwlink=new_tab}} opens external link in a new tab\n"                \
-" {{wwwlink=current_tab}} opens external link in a current tab\n"        \
-"----\n"                                                                 \
-"\n"                                                                     \
+" {{http://google.com=new_tab}} opens external link in a new tab\n"                \
+" {{http://google.com=current_tab}} opens external link in a current tab\n"        \
+"==Images \n" \
 "Links to images display the image:\n"                                   \
-"\n"                                                                     \
-" Pictures size and border: {{width=100 height=50 border=2}}\n"          \
-" Return to the default width, height and border: {{picture=default}}\n"  \
-"\n"                                                                     \
-"Some text before\n"                                                     \
-"{{width=100 height=50 border=1}}\n"                                     \
+" http://www.google.com/images/logo.gif\n"                                \
 "http://www.google.com/images/logo.gif\n"                                \
-"Some text after\n"                                                      \
-" {{width=100 height=50 border=1 right}}                              \n"\
+"\n"                                                                     \
+"Put the following examples before an image link to transform an image \n" \
+" {{width=100 height=50 border=2}}\n"          \
+" {{picture=default}}\n"  \
+"\n"                                                                     \
 "{{width=100 height=50 border=1 right}} http://www.google.com/images/logo.gif\n"\
-"Picture is on the right\n\nMore text\n\n"                                 \
-" {{width=100 height=50 border=1 left}}                              \n"\
-"{{width=100 height=50 border=1 left}} http://www.google.com/images/logo.gif\n"\
-"Picture is on the left\n\nMore text\n\n"                                 \
-"{{width=100 height=50 border=1}}\n" \
-"Picture http links have picture with an !http:// link inside, like [http://www.google.com/images/logo.gif http://www.google.com]\n" \
-" Picture http links have picture with an !http:// link inside, like [http://www.google.com/images/logo.gif http://www.google.com]\n" \
-"----\n"                                                                 \
+"===Images with Links \n" \
+"Example image with an http links have picture with an !http:// link inside, like \n" \
+" ![http://www.google.com/images/logo.gif http://www.google.com]\n" \
+"[http://www.google.com/images/logo.gif http://www.google.com]\n" \
+"==Video \n" \
+"video=http://localhost/fake_video_link.mp4 \n" \
 "\n"                                                                     \
-" Video youtube, videomotion, veoh, vimeo, flash... embedded:\n"         \
-" youtube=http://www.youtube.com/v/---adress--- \n"                       \
-" dailymotion=http://www.dailymotion.com/swf/---adress--- \n"             \
-" vimeo=http://..... veoh=http://..... flash=http://.....\n"             \
-" line starts with youtube... and terminate the adress with a space\n"   \
-"----\n"                                                                 \
+"Use ![provider]=!http://location format\n" \
+" youtube=http://www.youtube.com/v/AAABBCCC \n" \
+" video=http://www.location.com/f.mp4 \n" \
+"===Video Providers\n" \
+"|dailymotion|http://www.dailymotion.com/swf/---adress--- \n"             \
+"|flash|http://.....\n"             \
+"|veoh|http://..... \n" \
+"|video|!http://www.locatoin.com/f.mp4 \n" \
+"|vimeo|=http://..... \n"             \
+"|youtube|http://www.youtube.com/v/---adress--- \n" \
 "\n"                                                                     \
-"Unordered lists begin with a '* '. The number of asterisks determines the level:\n" \
+"==Lists \n" \
+"===Unordered lists \n" \
+"begin with a '* '. The number of asterisks determines the level:\n" \
 "* foo\n"                                                                \
 "* bar\n"                                                                \
 "** boom\n"                                                              \
@@ -405,21 +419,31 @@
 "  ** bam\n"                                                             \
 "  * baz\n"                                                              \
 "\n"                                                                     \
-"Ordered lists work the same, but use a '#'\n"                           \
+"===Ordered lists \n" \
+"work the same, but use a '#'\n"                           \
+"# foo\n"                                                                \
+"# bar\n"                                                                \
+"## boom\n"                                                              \
+"## bam\n"                                                               \
+"# baz\n"                                                                \
+"\n"                                                                     \
+"  # foo\n"                                                              \
+"  # bar\n"                                                              \
+"  ## boom\n"                                                            \
+"  ## bam\n"                                                             \
+"  # baz\n"                                                              \
 "----\n"                                                                 \
-"Tables begin the line with a '|' and before every new column after.\n"  \
+"==Tables \n" \
+"begin the line with a '|' and before every new column after.\n"  \
 "\n"                                                                     \
 "| row:1,col:1 | row:1,col:2\n"                                          \
 "| row:2,col:1 | row:2,col:2\n"                                          \
 " | row:1,col:1 | row:1,col:2\n"                                         \
 " | row:2,col:1 | row:2,col:2\n"                                         \
 "---\n"                                                                  \
-"Quotation begins with ' \n"                                             \
-"\n"                                                                     \
-" 'I had a monumental idea this morning, but I didn't like it\n"         \
-"'I had a monumental idea this morning, but I didn't like it\n"          \
-"----\n"                                                                 \
-" {{expand}} and {{collapse}} use javascript and must be enabled in the user's browser.\n"\
+"==Expand and Collapse (aka Accordions) \n"                                                                 \
+"===Expand \n" \
+" {{expand}} and {{collapse}} use javascript and must be enabled in the user's browser.\n" \
 "Expand text\n"                                                          \
 "\n"                                                                     \
 " {{expand}}  or  {{expand=your label here}}\n"                          \
@@ -427,23 +451,23 @@
 " {{-expand}}\n"                                                         \
 "\n"                                                                     \
 "{{expand}}\n"                                                           \
-"text, links: http://www.google.com\n"                                  \
+"This was inside an expand\n"                                                          \
 "{{-expand}}\n"                                                         \
-"\nImbricated\n"                                                        \
+"====Multi-leveled Expands\n"                                                        \
 " {{expand}}\n"                                                         \
-" Some text\n"                                                          \
+" This was inside an expand\n"                                                          \
 " {{expand}}\n"                                                         \
-" More text\n"                                                           \
+" This was further inside\n"                                                           \
 " {{-expand}}\n"                                                         \
 " {{-expand}}\n"                                                         \
 "{{expand}}\n"                                                         \
-"Some text\n"                                                          \
+"This was inside an expand\n"                                                          \
 "{{expand}}\n"                                                         \
-"More text\n"                                                           \
+"This was further inside\n"                                                           \
 "{{-expand}}\n"                                                         \
 "{{-expand}}\n"                                                         \
-"----\n"                                                                 \
-"Collapse text, can be imbricated too.\n"                                    \
+"===Collapse\n"                                                                 \
+"Collapse is a pre-opened expand \n"                                    \
 "\n"                                                                     \
 " {{collapse}}  or  {{collapse=your label here}}\n"                       \
 " text, links, images\n"                                                 \
@@ -452,30 +476,28 @@
 "{{collapse}}\n"                                                          \
 "text, links: http://www.google.com\n"                                  \
 "{{-collapse}}\n"                                                        \
-"----\n" \
-"Simple form: ToDo list\n" \
+"==Forms\n" \
+"===Overview \n" \
+"With /forms/, uses can add / remove todo type check items.  The state of an items checkbox can be updated by users as well \n" \
 " {{entry}} or {{entry tiny/small/medium/large/huge date}}\n" \
-" !{{data}}   (remove ! before this tag)\n" \
-" Entries are added in the page after the tag data\n" \
+" !{{data}}   (remove ! before this tag) - Entries are added in the page after the tag data\n" \
 " {{delete}} deletes the selected field\n" \
 " {{save}} saves the checked fields\n" \
+"===Example \n" \
+" {{entry}}\n" \
+" {{data}}\n" \
+" {{delete}}{{save}}\n" \
 "{{entry}}\n" \
 "{{data}}\n" \
 "{{delete}}{{save}}\n" \
 "----\n"  \
-" Table of contents {{toc}} can be between collapse or expand\n" \
+"==Table of contents \n" \
+"A /table of contents/ will be created at the top of the page containing all of the heading in the page  \n" \
+"(see the top of this article for an example of a table of contents) \n" \
+" {{toc}}\n" \
 "{{collapse=Table of contents}}{{toc}}{{-collapse}}\n" \
-"----\n" \
-"<Inline> <html> <is> <escaped>.\n" \
-"\n" \
-"----\n" \
-"Lines prefixed with a space are unformatted ( Like examples on this page )\n" \
-"\n" \
-"----\n" \
-" There is a `keyword` in this line.\n" \
-"There is a `keyword` in this line.\n" \
-"\n" \
-"----\n" \
+"can be between collapse or expand \n" \
+"==Scheduling \n" \
 " Schedule text with {{schedule=date;show this text if date is true;show this text if false}}\n" \
 " or {{schedule=date;show it is true}} or {{schedule=date;;show it is false}}\n" \
 " date can be the day of the week Monday...Sunday or the month January...December\n" \
@@ -485,18 +507,18 @@
 " {{schedule=d/m/n}} set the date of the page to perform a test\n" \
 " d=0...6 (Sunday...Saturday) m=1...12 (January...December) n=1...31 \n" \
 "\n" \
-"----\n" \
+"==File Upload \n" \
 " To upload file or image into the server with {{upload}}\n" \
 "Upload your file below then go to Index [Index?Folder=images images] \n" \
 "or [Index?Folder=files files] to check your file uploaded:\n\n" \
 "(Note:size allowed can be set to 0 or limited.)\n" \
 "{{upload}}\n" \
 "\n" \
-"----\n" \
-" Define a private zone in the page with {{private}}\n" \
-" Login is required to show after this tag\n" \
+"==Private Zones\n" \
+" {{private}} will restrict showing anything after this tag, and will require \n" \
+" logging in to be able to view.\n" \
 "{{private}}\n" \
-" This text is hidded if you are not logged!\n" \
+" If you can see this, you are logged in!\n" \
 "\n" \
 "----\n" 
 
