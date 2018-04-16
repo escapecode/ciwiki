@@ -29,13 +29,13 @@
 " ( <a href=%s?edit title='Edit this wiki page contents. [alt-j]' accesskey='j'>Edit</a> | " \
 "<a href=%s?delete title='Delete page. [alt-d]' accesskey='d'>Delete</a> ) </td>" \
 "<td align='right' >\n" \
-"<a href='Login' title='Login page. [alt-l]' accesskey='l'>%s</a> |\n"  \
+"<a href='Login' title='Login page. [alt-l]' accesskey='l'>%s</a> &nbsp; &nbsp; &nbsp;|\n"  \
 "<a href='WikiHome' title='Visit Wiki home page. [alt-z]' accesskey='z'>Home</a> |\n"  \
 "<a href='Index' title='List all pages in the wiki. [alt-i]' accesskey='i' >Index</a> | \n"  \
 "<a href='Changes' title='List recent changes in the wiki. [alt-r]' accesskey='r' >Changes</a> | \n"  \
-"<a href='Create' title='Create a new wiki page by title. [alt-c]' accesskey='c'>New</a> | \n"    \
+"<a href='Create' title='Create a new wiki page by title. [alt-c]' accesskey='c'>Add</a> | \n"    \
 "<a href='WikiHelp' title='Get help on wiki usage and formatting.'>Help</a>  \n"    \
-"<input type='text' name='expr' size='15' title='Enter text to search for and press return.' /> </td>\n"  \
+"<input type='text' name='expr' size='15' placeholder='search for word(s)' title='Enter text to search for and press return.' /> </td>\n"  \
 "</tr>\n"                                                                \
 "</table>\n"                                                             \
 "</form>\n"                                                              \
@@ -65,7 +65,7 @@
 
 #define PAGEFOOTER                                                       \
                                                                          \
-"</div><div id='footer'>CiWiki alias DidiWiki, Version: " VERSION "</div>\n"
+"</div><div id='footer'>CiWiki Version: " VERSION "</div>\n"
 
 
 #define SHORTHELP                                                    \
