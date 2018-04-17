@@ -874,7 +874,7 @@ HttpResponse *res, char *raw_page_data, int autorized, char *page)
         /* table of contents */
         if ( strstr(line+2,"toc") )
         {
-            int item_depth = 1;
+            int item_depth = 0;
             int this_item_depth = 0;
 			http_response_printf(res, "<ul class='toc'>");
           int sectioncnt=0;
@@ -907,7 +907,12 @@ HttpResponse *res, char *raw_page_data, int autorized, char *page)
             
             item_depth = this_item_depth;
           }
-			http_response_printf(res, "</ul>");
+          
+          while ( item_depth >= 0 )
+          {
+			http_response_printf(res, "</ul></ul>");
+			item_depth--;
+          }		
         }
         /* entry  */
         if ( (str_ptr=strstr(line+2,"entry")) ) 
