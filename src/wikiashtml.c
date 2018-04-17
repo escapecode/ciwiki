@@ -162,7 +162,7 @@ check_for_link(char *line, int *skip_chars)
       *start = '\0';
       lgasprintf = asprintf(&result, 
       "<video controls>\n"
-      "<source src=\"%s\" \" />\n"
+      "<source src=\"%s\" type=\"video/webm\" />\n"
       "</video>\n",
       url,url);       
       *skip_chars = p - start;
@@ -334,6 +334,7 @@ check_for_link(char *line, int *skip_chars)
 
       /* url is an image (look at the file extension) ? */
       if ( !strncasecmp(url+len-4, ".gif", 4) || !strncasecmp(url+len-4, ".png", 4) 
+      || !strncasecmp(url+len-4, ".svg", 4)
       || !strncasecmp(url+len-4, ".jpg", 4) || !strncasecmp(url+len-5, ".jpeg", 5) )
       {   
           if (pic_width) 
@@ -385,7 +386,7 @@ check_for_link(char *line, int *skip_chars)
                       url, border_pic_str, width_pic_str, height_pic_str, position_pic_str);
             }
       }
-      else // url or title does'nt link to an image
+      else // url or title doesn't link to an image
       {
           char *extra_attr = "";
 
