@@ -384,6 +384,7 @@ wiki_show_index_page(HttpResponse *res, char *dir)
         {
           //exclude hidden and style
           if ((namelist[n]->d_name)[0] == '.'
+              || !strcmp(namelist[n]->d_name, "favicon.ico")
               || !strcmp(namelist[n]->d_name, "styles.css"))
             goto cleanup;
           //print link to page and page name (previous pages are not printed)
@@ -498,7 +499,7 @@ wiki_show_header(HttpResponse *res, char *page_title, int want_edit, int autoriz
     "<html xmlns='http://www.w3.org/1999/xhtml'>\n"
     "<head>\n"
     "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n" 
-    "<link rel='SHORTCUT ICON' href='favicon.ico' />\n"
+    "<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />\n"
     "<link media='all' href='styles.css' rel='stylesheet' type='text/css' />\n"
     "<title>%s</title>\n"
     "<script type=\"text/javascript\">\n"
@@ -711,7 +712,7 @@ wiki_handle_http_request(HttpRequest *req)
   if (!strcmp(page, "/favicon.ico"))
   {
     /*  Return favicon */
-    http_response_set_content_type(res, "image/ico");
+    http_response_set_content_type(res, "image/x-icon");
     http_response_set_data(res, FaviconData, FaviconDataLen); 
     http_response_send(res);
     exit(0);
@@ -723,7 +724,7 @@ wiki_handle_http_request(HttpRequest *req)
     /* check if it's an image extension */
     if ( !strcasecmp(str_ptr, ".png") || !strcasecmp(str_ptr, ".jpeg") ||
          !strcasecmp(str_ptr, ".jpg") || !strcasecmp(str_ptr, ".gif") ||
-         !strcasecmp(str_ptr, ".pdf") )
+         !strcasecmp(str_ptr, ".pdf") || !strcasecmp(str_ptr, ".ico") )
     {
       http_response_send_smallfile(res, page+1, "image/ico", MAXFILESIZE); //size limitation, see ci.h
       exit(0);
@@ -1428,10 +1429,10 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
     /* Read in optional CSS data file*/
     CssData = file_read("styles.css");
   
-  /* use the Favicon as a png picture. */
-  if ( access(PICSFOLDER"/ciwiki.png", R_OK ) != 0) {
+  /* create Favicon */
+  if ( access("favicon.ico", R_OK ) != 0) {
     FILE* fp;  
-    if ( (fp = fopen(PICSFOLDER"/ciwiki.png", "wb")) ) {
+    if ( (fp = fopen("favicon.ico", "wb")) ) {
       unsigned char *picData = FaviconData;
       int picLen = FaviconDataLen;
       int bytes_written=0;
@@ -1445,38 +1446,9 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
       fclose(fp);
     }
     else
-	  fprintf(stderr, "Unable to create '%s'\n",PICSFOLDER"/ciwiki.png");
+	  fprintf(stderr, "Unable to create '%s'\n","favicon.ico");
   }
   
-  /* if favicon.ico file exist then load it 
-   else use the default favicon stored at the end of wikitext.h */
-  if ( access(".favicon.ico", R_OK ) == 0) 
-  {
-    FILE*       fp;
-    int         len;
-
-    if ( (fp = fopen(".favicon.ico", "rb")) )
-    {
-      /* get file size */
-      fseek (fp , 0 , SEEK_END);
-      if ( ftell(fp) < FAVICONDATAMAX )
-      { 
-        rewind (fp);      
-        len = fread(FaviconData, 1,FAVICONDATAMAX, fp);
-        if (len >= 0) FaviconData[len] = '\0';
-        FaviconDataLen=len;
-        fprintf(stderr,"Favicon file is loaded %i bytes\n",len);
-      }
-      else
-        fprintf(stderr,"Favicon file is too large!\n");
-      fclose(fp);
-    }
-    else
-      fprintf(stderr,"Favicon file cannot open!\n");
-  }	
-  else
-    fprintf(stderr,"Use internal ciwki favicon.\n");
-    
   /* Delete previous permission list */
   remove(ACCESSFOLDER"/.session.txt");
   
