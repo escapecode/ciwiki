@@ -256,25 +256,26 @@
 #define HOMETEXT ""                                                      \
                                                                          \
 "==Welcome to !CiWiki\n" \
-"[images/ciwiki.png]\n" \
+"[images/ciwiki.svg]\n" \
 "\n" \
-"/!CiWiki/' is a lightweight [http://en.wikipedia.org/wiki/Wiki WikiWikiWeb].\n" \
+"This /!CiWiki / website is a lightweight [http://en.wikipedia.org/wiki/Wiki WikiWikiWeb].\n" \
 "\n" \
-"In essence, this website is an easy way for anyone to make and edit webpages (even this page you are currently reading).\n" \
-"For a reference, [http://wikipedia.org] runs a program just like !CiWiki, allowing their users to make changes to their webpage articles.\n" \
+"Essentially, this website is an easy way for anyone to make and edit webpage.  Even this page you are currently reading can be changed easily.\n" \
+"For a reference of what you can do, [http://wikipedia.org] is also a !WikiWikiWeb website like CiWiki. It too allows their users to make changes to online encyclopedia webpage articles.\n" \
 "\n" \
-"===What can you do with !CiWiki\n" \
-"* Make pages that hold food recipes that all of youur friends can read, as well as allow them to add their own recipes\n" \
-"* Make a To Do list of your tasks.  You can make your To Do tasks visible by others, or only by people with access\n" \
+"===Some ways to use !CiWiki\n" \
+"You can set up your CiWiki website in many ways \n" \
+"* Make an online cookbook where people can share their own [Example_Cookie_Recipe recipes]\n" \
+"* Make a [Example_Grocery_List To Do list] of your tasks.  You can make your To Do tasks visible by others, or only by people with access\n" \
 "* Blog about a topic or make an onlne trip journal.  You can even add photos and videos\n" \
 "* Write a book.  Each webpage you create can be a different chapter of the book.  You decide what chapters others can see\n" \
-"* Create training documentation that you or others can update whenever changes have to be made\n" \
+"* Create [Example_Training training documentation] that you or others can update whenever changes have to be made\n" \
 "* Make an encyclopedia website just like [http://wikipedia.org]\n" \
 "\n" \
 "\n" \
 "Formatting webpage text, images, links, etc. is easily handled requiring no coding experience.  You can quickly learn how to use !CiWiki by going to WikiHelp.  You can also play around making webpage articles by visiting WikiSandbox.\n" \
 "\n" \
-"!CiWiki software is lightweight, doesn't require a web server or database, doesn't need a code interpreter (like PHP), and doesn't require you to install other software.\n"
+"From a technical perspective, !CiWiki software is lightweight, doesn't require a web server or database, doesn't need a code interpreter (like PHP), and doesn't require you to install other software.\n"
 
 
 #define HOMEREDIRECT ""                                                  \
@@ -521,6 +522,70 @@
 " If you can see this, you are logged in!\n" \
 "\n" \
 "----\n" 
+
+#define EXAMPLERECIPE ""                                                  \
+                                                                         \
+"=Chocolate Chip Cookie Recipe \n" \
+"[images/chocolate_chip_cookie.svg] \n" \
+" \n" \
+"These cookies are super delicious and super moist!  Don't be afraid to /not/ share these with those undeserving. \n" \
+" \n" \
+"==Ingredients \n" \
+"* 3 Cups flour \n" \
+"* 2 Cups chocolate chips \n" \
+"* 1 Cup sugar \n" \
+"* 1 Cup brown sugar \n" \
+"* 1 Cup butter \n" \
+"* 2 Eggs \n" \
+"* 2 tsp vanilla \n" \
+"* 1 tsp baking powder \n" \
+"* pinch of salt \n" \
+"* 1 cup of nuts optional \n" \
+" \n" \
+"==Directions \n" \
+"# Preheat oven to 350F \n" \
+"# blend together everything except eggs and butter \n" \
+"# blend in eggs and butter \n" \
+"# place heaping spoonful of dough on cookie sheet and press into cookie shape \n" \
+"# bake cookies for 8 - 12 minutes \n" \
+" \n" \
+"Let cool, and enjoy. \n" \
+"\n"
+
+#define EXAMPLEGROCERIES ""                                                  \
+                                                                         \
+"=Grocery Checklist \n" \
+"==Item To Buy \n" \
+"Add a new grocery /item/ to your list \n" \
+"{{entry}} \n" \
+"==Groceries \n" \
+"-- \n" \
+"{{data}} \n" \
+"{{checkbox=1523889143;0}} milk \n" \
+" \n" \
+"{{checkbox=1523888171;0}} orange juice \n" \
+" \n" \
+"{{checkbox=1523888125;1}} bread \n" \
+" \n" \
+"-- \n" \
+"{{save}} checkmark values to let you know what items you bought \n" \
+" \n" \
+"{{delete}} checked items if you don't want to get those items \n" \
+"\n"
+
+#define EXAMPLETECHNICAL ""                                                  \
+                                                                         \
+"=RS-25 Rocket Engine Technical Manual \n" \
+"[images/schematic.svg] \n" \
+"==Overview \n" \
+"The RS-25 Rocket engine is a self sustaining engine requiring no fuel source.  The rocket can be modified for interplanetary using simple modifications. \n" \
+" \n" \
+"==Upgrade Procedures \n" \
+"# Put on safety googles \n" \
+"# Remove the flange recombustionator \n" \
+"# Insert hyperspanning tool under L3 \n" \
+"# Turn L3 to upgrade position \n" \
+"\n"
 
 
 #define STYLESHEET                                                       \
