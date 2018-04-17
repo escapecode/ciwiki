@@ -40,6 +40,7 @@
 "</table>\n"                                                             \
 "</form>\n"                                                              \
 "</div>\n"                                                               \
+"<p>&nbsp;</p> \n" \
 "<div id='wikidata'>\n"
 
 #define PAGEHEADER                                                       \
@@ -2025,6 +2026,10 @@
 "    background-color: #eef;\n" \
 "    border: 1px solid #aaa;\n" \
 "    font-family: Verdana, Arial, Helvetica, sans-serif;\n" \
+"    top: 0;\n" \
+"    left: 0;\n" \
+"    position: fixed;\n" \
+"    width: 100%;\n" \
 "    padding: 5px;\n" \
 "    margin-bottom:20px;\n" \
 "}\n" \
@@ -2114,6 +2119,11 @@
 "border:1px solid #ccc;\n" \
 "background:#f2f2f2;\n" \
 "padding:5px;\n" \
+"}\n" \
+".toc { \n" \
+"background-color: #eff;\n" \
+"border: 1px dotted #aaa;\n" \
+"margin: 5em;\n" \
 "}\n" \
 "h1 { \n" \
 "	text-align : center; \n" \
