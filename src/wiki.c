@@ -723,9 +723,14 @@ wiki_handle_http_request(HttpRequest *req)
     /* check if it's an image extension */
     if ( !strcasecmp(str_ptr, ".png") || !strcasecmp(str_ptr, ".jpeg") ||
          !strcasecmp(str_ptr, ".jpg") || !strcasecmp(str_ptr, ".gif") ||
-         !strcasecmp(str_ptr, ".pdf") || !strcasecmp(str_ptr, ".svg") )
+         !strcasecmp(str_ptr, ".pdf") )
     {
       http_response_send_smallfile(res, page+1, "image/ico", MAXFILESIZE); //size limitation, see ci.h
+      exit(0);
+    }
+    else if ( !strcasecmp(str_ptr, ".svg") )
+    {
+      http_response_send_smallfile(res, page+1, "image/svg+xml", MAXFILESIZE); //size limitation, see ci.h
       exit(0);
     }
     /* to download any file located in the folder /files/  */
