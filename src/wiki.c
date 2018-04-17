@@ -1371,6 +1371,7 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
   }
 
   /* Check if datadir/html exists and create if not */
+  /*
   if (stat(HTMLFOLDER, &st) != 0 )
   {
     if (mkdir(HTMLFOLDER, 0755) == -1)
@@ -1379,6 +1380,7 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
       exit(1);
     }
   }
+  */
 
   /* Check if datadir/scripts exists and create if not */
   if (stat(SCRIPTSFOLDER, &st) != 0 )
@@ -1391,8 +1393,8 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
   }
 
 
-  /* Write Default Help, Home page, styles.css if it doesn't exist 
-   * or rewrite Default Help */
+  /* Write Default Pages, Styles, Images,etc if they don't exist 
+   * Restore default Help, Home and CSS on restore_Wiki */
   if ( access("WikiHelp", R_OK) != 0 || (restore_Wiki & 1) )
     file_write("WikiHelp", HELPTEXT);
 
@@ -1410,6 +1412,15 @@ wiki_init(char *ciwiki_home, unsigned restore_Wiki, unsigned create_htmlHome)
 
   if ( access("Example_Grocery_List", R_OK) != 0 )
     file_write("Example_Grocery_List", EXAMPLEGROCERIES);
+
+  if ( access(PICSFOLDER"/ciwiki.svg", R_OK) != 0 )
+    file_write(PICSFOLDER"/ciwiki.svg", SVGWIKI);
+
+  if ( access(PICSFOLDER"/chocolate_chip_cookie.svg", R_OK) != 0 )
+    file_write(PICSFOLDER"/chocolate_chip_cookie.svg", SVGCOOKIE);
+
+  if ( access(PICSFOLDER"/schematic.svg", R_OK) != 0 )
+    file_write(PICSFOLDER"/schematic.svg", SVGTECHNICAL);
 
   if ( access("styles.css", R_OK) != 0 || (restore_Wiki & 4) ) 
     file_write("styles.css", STYLESHEET);
