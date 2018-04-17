@@ -33,7 +33,7 @@
 "<a href='WikiHome' title='Visit Wiki home page. [alt-z]' accesskey='z'>Home</a> |\n"  \
 "<a href='Index' title='List all pages in the wiki. [alt-i]' accesskey='i' >Index</a> | \n"  \
 "<a href='Changes' title='List recent changes in the wiki. [alt-r]' accesskey='r' >Changes</a> | \n"  \
-"<a href='Create' title='Create a new wiki page by title. [alt-c]' accesskey='c'>Add</a> | \n"    \
+"<a href='Create' title='Add a new wiki page by title. [alt-c]' accesskey='c'>Add</a> | \n"    \
 "<a href='WikiHelp' title='Get help on wiki usage and formatting.'>Help</a>  \n"    \
 "<input type='text' name='expr' size='15' placeholder='search for word(s)' title='Enter text to search for and press return.' /> </td>\n"  \
 "</tr>\n"                                                                \
@@ -53,7 +53,7 @@
 "<a href='WikiHome' title='Visit Wiki home page. [alt-z]' accesskey='z'>Home</a> |\n"  \
 "<a href='Index' title='List all pages in the wiki. [alt-i]' accesskey='i' >Index</a> | \n"  \
 "<a href='Changes' title='List recent changes in the wiki. [alt-r]' accesskey='r' >Changes</a> | \n"                                    \
-"<a href='Create' title='Create a new wiki page by title. [alt-c]' accesskey='c'>New</a> | \n"                                         \
+"<a href='Create' title='Add a new wiki page by title. [alt-c]' accesskey='c'>Add</a> | \n"                                         \
 "<a href='WikiHelp' title='Get help on wiki usage and formatting.'>Help</a>  \n"                                       \
 "<input type='text' name='expr' size='15' title='Enter text to search for and press return.' /> </td>\n"                               \
 "</tr>\n"                                                                \
@@ -84,7 +84,6 @@
 #define LOGINFORM                                                       \
                                                                         \
 "<h1>Login</h1>"                                                        \
-"<p><a href='NewAccount'>New user? Please create a new account.</a></p>\n" \
 "<form method=POST action='Login'>\n"                                  \
 "<table border='0' width='100%%'>\n"                                      \
 "<tr>\n"                                                                 \
@@ -94,7 +93,7 @@
 "<td align='right'>Password:</td>"                                       \
 "<td align='left'><input type='password' name='password' /></td>\n"        \
 "</tr><tr>\n"                                                           \
-"<td></td><td align='left'><input type='submit' value='Login' /></td>\n" \
+"<td></td><td align='left'><input type='submit' value='Login' /> &nbsp; &nbsp; <a href='NewAccount'>Register</a></td>\n" \
 "</tr></table>\n"                                                      \
 "</form>\n" 
 
@@ -132,19 +131,18 @@
 #define NEWLOGINFORM                                                       \
                                                                         \
 "<h1>Create a new Account</h1>"                                         \
-"<p>Please choose your user name, your password and enter a valid email address.<br>" \
 "You will receive your validation code on your email</p>\n" \
 "<form method=POST action='Login'>\n"                                  \
 "<table border='0' width='100%%'>\n"                                      \
 "<tr>\n" \
 "<td align='right'>User name:</td>"                                      \
-"<td align='left'><input type='text' name='username' /></td>\n"         \
+"<td align='left'><input type='text' name='username' pattern='.{5,}' title='5 characters minimum'required /></td>\n"         \
 "</tr><tr>\n"                                                           \
 "<td align='right'>Password:</td>"                                       \
-"<td align='left'><input type='text' name='password' /></td>\n"        \
+"<td align='left'><input type='password' name='password' pattern='.{5,}' title='5 characters minimum' required /></td>\n"        \
 "</tr><tr>\n"                                                           \
 "<td align='right'>Your Email:</td>"                                     \
-"<td align='left'><input type='text' name='email' /></td>\n"  \
+"<td align='left'><input type='email' name='email' placeholder='Enter a valid email address' required /></td>\n"  \
 "</tr><tr>\n"                                                           \
 "<td align='left' colspan=2><br>A validation code will be returned by mail.<br><br></td>\n"     \
 "</tr><tr>\n"                                                           \
@@ -379,6 +377,8 @@
 " {{http://google.com=current_tab}} opens external link in a current tab\n"        \
 "==Images \n" \
 "Links to images display the image:\n"                                   \
+" [images/ciwiki.svg]\n"                                \
+"[images/ciwiki.svg]\n"                                \
 " http://www.google.com/images/logo.gif\n"                                \
 "http://www.google.com/images/logo.gif\n"                                \
 "\n"                                                                     \
