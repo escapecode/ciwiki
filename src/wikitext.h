@@ -61,6 +61,7 @@
 "</table>\n"                                                             \
 "</form>\n"                                                              \
 "</div>\n"                                                               \
+"<p>&nbsp;</p> \n" \
 "<div id='wikidata'>\n"
 
 
