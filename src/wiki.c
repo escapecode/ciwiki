@@ -360,19 +360,19 @@ wiki_show_index_page(HttpResponse *res, char *dir)
       if (*dir=='.')
       http_response_printf(res, "<b><a href='Index?Folder=%s'>%s</a></b> -\n", ".","Pages"); 
       else
-        http_response_printf(res, "<i><a href='Index?Folder=%s'>%s</a></i> -\n", ".","Pages"); 
+        http_response_printf(res, "<a href='Index?Folder=%s'>%s</a> -\n", ".","Pages"); 
       if ( !strcmp(dir,PICSFOLDER) )
         http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b> -\n", PICSFOLDER, toupper(PICSFOLDER[0]), PICSFOLDER + 1); 
       else  
-        http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i> -\n", PICSFOLDER, toupper(PICSFOLDER[0]), PICSFOLDER + 1); 
+        http_response_printf(res, "<a href='Index?Folder=%s'>%c%s</a> -\n", PICSFOLDER, toupper(PICSFOLDER[0]), PICSFOLDER + 1); 
       if ( !strcmp(dir,FILESFOLDER) )  
         http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b>\n", FILESFOLDER, toupper(FILESFOLDER[0]), FILESFOLDER + 1); 
       else
-        http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i>\n", FILESFOLDER, toupper(FILESFOLDER[0]), FILESFOLDER + 1); 
+        http_response_printf(res, "<a href='Index?Folder=%s'>%c%s</a>\n", FILESFOLDER, toupper(FILESFOLDER[0]), FILESFOLDER + 1); 
       //~ if ( !strcmp(dir,HTMLFOLDER) )
         //~ http_response_printf(res, "<b><a href='Index?Folder=%s'>%c%s</a></b>\n", HTMLFOLDER, toupper(HTMLFOLDER[0]), HTMLFOLDER + 1); 
       //~ else
-        //~ http_response_printf(res, "<i><a href='Index?Folder=%s'>%c%s</a></i>\n", HTMLFOLDER, toupper(HTMLFOLDER[0]), HTMLFOLDER + 1); 
+        //~ http_response_printf(res, "<a href='Index?Folder=%s'>%c%s</a>\n", HTMLFOLDER, toupper(HTMLFOLDER[0]), HTMLFOLDER + 1); 
         
       http_response_printf(res, "<hr /><ul>\n");
       //prepare an collapsible box
