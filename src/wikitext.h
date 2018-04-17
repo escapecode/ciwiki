@@ -293,29 +293,31 @@
 "!CiWiki was created by Jean-Pierre Redonnet and is available on [https://github.com/RhoneAlpes/ciwiki Github]\n\n" \
 "!DidiWiki was created by Matthew Allum \n" \
 "\n" \
-"Please refer to Github to see a list of development contributers. \n" \
+"Please visit [https://github.com/RhoneAlpes/ciwiki Github] to see a list of development contributers. \n" \
 "=Quick Overview \n"                                                    \
-"===Creating Webpages Quickly and Easily \n" \
-"!CiWiki allows you to type in short lines of text to automatically format a page. \n" \
-"For example, you can do something as easy like typing /!youtube=link / to have a Youtube video appear on your page. \n" \
 "===Finding a !CiWiki page \n" \
-"In the upper right is a search box.  Any word(s) entered will be searched for amongst all of the text of all of the pages\n" \
+"In the upper right is a search box.  Any word(s) entered will be searched against all text af any pages\n" \
 "\n"                                                                     \
 "To search through the page titles only, click on the /Index/ link on the top menu. \n" \
-"Since all of the /Page/ titles are visible, you can than use your browser's built in search, keys (e.g. <ctrl><f>) \n"           \
+"Since all of the /Page/ titles are visible, you can than use your browser's built in search, keys (e.g. <ctrl>-f) \n"           \
+"===Creating Webpages Quickly and Easily \n" \
+"To make changes to pages, you will need to create an account and login.  You can create an account via the [Login login] menu option at the topl. \n" \
+"\n" \
+"!CiWiki allows you to type in short lines of text to automatically format a page. \n" \
+"For example, you can do something as easy like typing /*!youtube=link */ to have a Youtube video appear on your page. \n" \
 "\n"                                                                     \
-"Use the WikiSandbox to practice formatting.\n"                         \
+"To practice, visit WikiSandbox\n"                         \
 "=Using Key Tags to Format Articles \n"                                                                     \
 "==Headings \n" \
 "An /=/ character creates headings.  The number of /=/ represents the heading level \n"                                                    \
 "The formatting for the area you are reading now uses the following headings \n" \
-" =Formatting\n"                                                   \
+" =Using Key Tags to Format Articles\n"                                                   \
 " ==Headings\n"                                        \
-" ==Horizontal line\n"                                        \
+" ==Horizontal lines\n"                                        \
 "==Horizonal line\n"                                                 \
 " -- will create a horizontal line\n"                                                                 \
 "--\n"                                                                 \
-"==Text \n" \
+"==Working with Text \n" \
 "===Base Text Formatting\n"                                                                 \
 " \n" \
 "  *Bold text*, /italic text/, _underscore text_ and -strikethrough- /*combination*/ \n"  \
@@ -328,8 +330,8 @@
 " Paragraphs are separated by a blank line.\n"                           \
 "\n"                                                                     \
 " Like this. Another paragraph.\n"                                       \
-"===Quotation \n" \
-"Indented quotatiopjns begin with ' \n"                                             \
+"===Quotations \n" \
+"Indented quotations begin with ' \n"                                             \
 "\n"                                                                     \
 " 'I had a monumental idea this morning, but I didn't like it\n"         \
 "'I had a monumental idea this morning, but I didn't like it \n"          \
@@ -338,7 +340,7 @@
 " There is a `keyword` in this line.\n" \
 "There is a `keyword` in this line.\n" \
 "\n" \
-"===Color \n"                                                                 \
+"===Coloring \n"                                                                 \
 "\n"                                                                     \
 " Text {B}blue{B}\n"                                                    \
 "Text {B}blue{B}\n"                                                    \
@@ -518,6 +520,7 @@
 "==Private Zones\n" \
 " {{private}} will restrict showing anything after this tag, and will require \n" \
 " logging in to be able to view.\n" \
+" If you are not logged in, you will not be able to see anything on this page after this sentence \n" \
 "{{private}}\n" \
 " If you can see this, you are logged in!\n" \
 "\n" \
@@ -2116,7 +2119,7 @@
 "	text-align : center; \n" \
 "} \n" \
 " \n" \
-"h2, h3, h4, h5 { \n" \
+"h3, h4, h5 { \n" \
 "	margin-left: 1em; \n" \
 "} \n" \
 "\n" 
