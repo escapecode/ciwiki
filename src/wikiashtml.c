@@ -874,6 +874,9 @@ HttpResponse *res, char *raw_page_data, int autorized, char *page)
         /* table of contents */
         if ( strstr(line+2,"toc") )
         {
+            int item_depth = 1;
+            int this_item_depth = 0;
+			http_response_printf(res, "<ul class='toc'>");
           int sectioncnt=0;
           while ( (str_ptr=strchr(sectionlist,'\n')) )
           {
@@ -881,28 +884,30 @@ HttpResponse *res, char *raw_page_data, int autorized, char *page)
             
             sectioncnt++;
             /* header level */
-            int item_depth = 0;
+            int this_item_depth = 0;
             while ( *sectionlist == '=' ) 
             { 
               sectionlist++; 
-              item_depth++; 
+              this_item_depth++; 
             }
             /* indent */
-            for (j = 0; j < item_depth; j++)
+            if (this_item_depth > item_depth)
                 http_response_printf(res, "<ul>");
+            else if (this_item_depth < item_depth)
+                http_response_printf(res, "</ul>");
+
             /* skip first ! */
             if ( *sectionlist == '!' ) 
               sectionlist++;
+
             http_response_printf(res, 
               "<li><a href='#section%i'>%s</a></li>", 
               sectioncnt, sectionlist);
-            /* reset indentation */
-            for (j=0; j<item_depth; j++)
-              http_response_printf(res, "</ul>\n");
-            item_depth = 0;
-            /* point to the next header */  
             sectionlist = str_ptr+1;
+            
+            item_depth = this_item_depth;
           }
+			http_response_printf(res, "</ul>");
         }
         /* entry  */
         if ( (str_ptr=strstr(line+2,"entry")) ) 
